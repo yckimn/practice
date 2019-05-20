@@ -1,0 +1,11 @@
+FROM ubuntu:18.04
+MAINTAINER yckim.n <yckim.n@gmail.com>
+
+RUN apt-get update
+RUN apt-get install -y apache2 #Install Apache web server (only 'yes')
+
+EXPOSE 80
+
+CMD ["apachectl", "-D", "FOREGROUND"]
+
+
